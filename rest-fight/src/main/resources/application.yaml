@@ -1,0 +1,24 @@
+quarkus:
+  http:
+    port: 8030
+  banner:
+    path: rest-fight-banner.txt
+  rest-client:
+    rest-pokemon:
+      url: stork://rest-pokemon/
+  stork:
+    rest-pokemon:
+      service-discovery:
+        type: static
+        address-list: localhost:8010
+    rest-fight:
+      service-discovery:
+        type: static
+        address-list: localhost:8030
+  artemis:
+    url: tcp://localhost:61616
+    username: artemis
+    password: artemis
+fight:
+  statistics:
+    queue: org/heg/jms/jms/StatQueue

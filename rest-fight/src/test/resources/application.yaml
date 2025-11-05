@@ -1,0 +1,13 @@
+quarkus:
+  http:
+    port: 8030
+  banner:
+    path: rest-fight-banner.txt
+  rest-client:
+    rest-pokemon:
+      url: stork://rest-pokemon/
+  stork:
+    rest-pokemon:
+      service-discovery:
+        type: static
+        address-list: localhost:8010

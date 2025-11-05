@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:8030
+
+### GET fighters
+GET {{baseUrl}}/fighters/show
+Accept: application/json
+
+### GET fight
+GET {{baseUrl}}/fighters/fight?pokemonId1=1&pokemonId2=2
+Accept: application/json
+
+### GET fight
+GET {{baseUrl}}/fighters/fight?pokemonId1=4&pokemonId2=6
+Accept: application/json
