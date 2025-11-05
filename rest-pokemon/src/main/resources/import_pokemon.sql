@@ -1,0 +1,13 @@
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(1, 'VOLTALI', 90, 'N° 135 Pokemon Orage, Taille: 0.8m, Poids: 24.5kg', 1, 'http://localhost:8020/images/1.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(2, 'PIKACHU', 130, '' ,1, 'http://localhost:8020/images/2.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(3, 'ROCAILLOU d''Alola', 70, 'N° 074 Pokemon Roche, Taille: 0.4m, Poids: 20.3kg' ,1, 'http://localhost:8020/images/3.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(4, 'LUMINEON', 80, 'N° 457 Pokemon Neon, Taille: 1.2m, Poids: 24.0kg' ,5, 'http://localhost:8020/images/4.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(5, 'KRABBOSS', 100, 'N° 099 Pokemon Pince, Taille: 1.3m, Poids: 60.0kg' ,5, 'http://localhost:8020/images/5.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(6, 'BARBICHA', 110, '' ,5, 'http://localhost:8020/images/6.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(7, 'PRISMILLON', 120, 'N° 666 Pokemon Lépidécaille, Taille: 1.2m, Poids: 17.0kg' ,4, 'http://localhost:8020/images/7.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(8, 'BOUSTIFLOR', 80, 'N° 070 Pokemon Carnivore, Taille: 1.0m, Poids: 6.4kg' ,4, 'http://localhost:8020/images/8.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(9, 'CERIBOU', 50, 'N° 040 Pokemon Cerise, Taille: 0.4m, Poids: 3.3kg' ,4, 'http://localhost:8020/images/9.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(10, 'ONIX', 100, 'N° 095 Pokemon Serpenroc, Taille: 8.8m, Poids: 310.0kg' ,3, 'http://localhost:8020/images/10.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(11, 'BARLOCHE', 60, 'N° 339 Pokemon Barbillon, Taille: 0.4m, Poids: 1.9kg' ,3, 'http://localhost:8020/images/11.png');
+insert into pokemon (id, pokemon_name, life_points, resume, typeId, image_url) values(12, 'CARCHACROK', 130, 'N° 445 Pokemon Supersonic, Taille: 1.9m, Poids: 95kg' ,3, 'http://localhost:8020/images/12.png');
+ALTER SEQUENCE pokemon_SEQ RESTART with 50;

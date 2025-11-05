@@ -1,0 +1,32 @@
+{#include base.html}
+    {#contents}
+        <div class="container mt-5">
+        <div class="container">
+        <h1 class="display-3">{#insert title}Pokemon Administration{/}</h1>
+        <div class="alert alert-primary" role="alert" hx-get="/admin/count" hx-trigger="every 5s"></div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex" role="search" id="search-form" hx-get="/admin/pokemon" hx-trigger="submit" hx-target="#pokemon-placeholder">
+                        <input class="form-control me-2" name="search" type="search" placeholder="id or name" aria-label="Search">
+                        &nbsp;
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="list" hx-get="/admin/list" hx-target="#pokemon-placeholder">List All Pokemon</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="showAddForm" hx-get="/admin/showAddForm" hx-target="#pokemon-placeholder">Add Pokemon</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="pokemon-placeholder"></div>
+    {/contents}
+{/include}

@@ -1,0 +1,51 @@
+@baseUrl = http://localhost:8010
+
+### GET all pokemons
+GET {{baseUrl}}/pokemons/list
+Content-Type: application/json
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### GET pokemon by id
+GET {{baseUrl}}/pokemons/pokemon/1
+Content-Type: application/json
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### GET pokemon by id
+GET {{baseUrl}}/pokemons/pokemon/100
+Content-Type: application/json
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 404, "Response status is not 404");
+  });
+%}
+
+### GET show fighters
+GET {{baseUrl}}/pokemons/show
+Content-Type: application/json
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### GET search pokemon
+GET {{baseUrl}}/pokemons/search?name=VOLTALI
+Content-Type: application/json
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}

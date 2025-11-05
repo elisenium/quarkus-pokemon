@@ -1,0 +1,21 @@
+quarkus:
+  http:
+    port: 8010
+  banner:
+    path: rest-pokemon-banner.txt
+  datasource:
+    db-kind: h2
+    jdbc:
+      url: jdbc:h2:mem:default;DB_CLOSE_DELAY=-1
+  hibernate-orm:
+    log:
+      sql: false
+      format-sql: false
+    database:
+      generation: drop-and-create
+    sql-load-script: import_type.sql, import_pokemon.sql, import_attack.sql
+
+pokemon:
+  life:
+    bonus: 50
+    add-bonus: false

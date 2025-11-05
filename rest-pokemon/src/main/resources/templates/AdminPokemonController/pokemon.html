@@ -1,0 +1,15 @@
+{@org.heg.model.pokemon.Pokemon pokemon}
+{@java.lang.Integer count}
+    <tr>
+        <th scope="row">{count}</th>
+        <td>{pokemon.id}</td>
+        <td>
+            <div>
+                <img class="imgRounded" src="/images/{pokemon.id}.png" width="100" height="100" alt="{pokemon.id}.png">
+            </div>
+        </td>
+        <td>{pokemon.pokemonType}</td>
+        <td>{pokemon.name}</td>
+        <td>{pokemon.resume}</td>
+        <td>{pokemon.lifePoints}</td>
+    </tr>

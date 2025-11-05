@@ -1,0 +1,52 @@
+<br><br><br>
+<form class="needs-validation" hx-post="/admin/add" hx-target="#submit-placeholder">
+    <div class="row">
+        <div class="col">
+            <input name="pokemonName" type="text" class="form-control" placeholder="Pokemon name" aria-label="Pokemon name" required>
+            <div class="invalid-feedback">
+                Please choose a pokemon name.
+            </div>
+        </div>
+        <div class="col">
+            <input name="lifePoints" type="text" class="form-control" placeholder="Life points" aria-label="Life points" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input name="number" type="text" class="form-control" placeholder="Number" aria-label="Number">
+        </div>
+        <div class="col">
+            <input name="familly" type="text" class="form-control" placeholder="Familly" aria-label="Familly">
+        </div>
+        <div class="col">
+            <input name="size" type="text" class="form-control" placeholder="Size" aria-label="Size">
+        </div>
+        <div class="col">
+            <input name="height" type="text" class="form-control" placeholder="Height" aria-label="Height">
+        </div>
+    </div>
+    <br>
+    <div class="mb-3">
+        <textarea name="description" class="form-control" rows="3" placeholder="Description" aria-label="Description"></textarea>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input name="imageUrl" type="text" class="form-control" placeholder="Image URL" aria-label="Image URL">
+        </div>
+        <div class="col">
+            <select name="pokemonType" class="form-select" aria-label="Pokemon Type" required>
+                <option selected>Pokemon Type</option>
+                {#each pokemonTypes}
+                    <option value="{it.name}">{it.name}</option>
+                {/each}
+            </select>
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <br>
+    <div id="submit-placeholder"></div>
+</form>

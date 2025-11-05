@@ -1,0 +1,7 @@
+quarkus:
+  datasource:
+    db-kind: mysql
+    jdbc:
+      url: jdbc:mysql://localhost:3306/pokemon
+    username: root
+    password: mysqladmin
