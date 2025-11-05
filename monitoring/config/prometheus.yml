@@ -1,0 +1,55 @@
+global:
+  scrape_interval: 10s
+  evaluation_interval: 15s
+  external_labels:
+    system: quarkus-pokemon
+
+scrape_configs:
+  - job_name: prometheus
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: pokemon
+    metrics_path: /q/metrics
+    honor_labels: true
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['host.docker.internal:8010']
+        labels:
+          app: rest-pokemon
+          application: pokemon-service
+          system: quarkus-pokemon
+
+  - job_name: fight
+    metrics_path: /q/metrics
+    honor_labels: true
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['host.docker.internal:8030']
+        labels:
+          app: rest-fight
+          application: fight-service
+          system: quarkus-fight
+
+  - job_name: battle
+    metrics_path: /q/metrics
+    honor_labels: true
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['host.docker.internal:8020']
+        labels:
+          app: ui-battle
+          application: battle-service
+          system: quarkus-battle
+
+  - job_name: statistics
+    metrics_path: /q/metrics
+    honor_labels: true
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['host.docker.internal:8040']
+        labels:
+          app: rest-statistics
+          application: statistics-service
+          system: quarkus-statistics
